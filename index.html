@@ -26,6 +26,15 @@
     fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+    <script>
+(function(){
+  var prefix='/momoco-beaute-en';
+  if(location.pathname.indexOf(prefix)===0){
+    var newPath=location.pathname.slice(prefix.length)||'/';
+    history.replaceState({},'',newPath+location.search+location.hash);
+  }
+})();
+</script>
     <script type="module" crossorigin src="./assets/index-BaQMedeB.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-de4vZssq.css">
   <meta property="og:type" content="website">
